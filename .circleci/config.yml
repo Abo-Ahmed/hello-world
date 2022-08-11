@@ -59,16 +59,16 @@ jobs:
       - node/install:
           node-version: '14.15' 
       - eb/setup
-      - echo '**************** check 1'
-      - echo '$PARAM_AWS_CLI_ACCESS_KEY_ID'
-      - echo '**************** check 2'
-      - echo '$AWS_ACCESS_KEY_ID'
       - aws-cli/setup
       - checkout
       - run:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
+            echo "**************** check 1" 
+            echo $($PARAM_AWS_CLI_ACCESS_KEY_ID)
+            echo "**************** check 2" 
+            echo $($AWS_ACCESS_KEY_ID)
             npm run deploy
             
 workflows:
