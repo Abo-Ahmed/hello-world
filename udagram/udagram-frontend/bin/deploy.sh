@@ -1,8 +1,8 @@
 
 echo "**************** check 1" 
-echo $(PARAM_AWS_CLI_ACCESS_KEY_ID)
+echo "$PARAM_AWS_CLI_ACCESS_KEY_ID"
 echo "**************** check 2" 
-echo $(AWS_ACCESS_KEY_ID)
+echo "$AWS_ACCESS_KEY_ID"
 
 echo "NODE --version" 
 echo $(node --version)
