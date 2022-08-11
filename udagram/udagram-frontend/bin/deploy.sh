@@ -1,4 +1,14 @@
 
+echo "**************** check 1" 
+echo $($PARAM_AWS_CLI_ACCESS_KEY_ID)
+echo "**************** check 2" 
+echo $($AWS_ACCESS_KEY_ID)
+
+echo "NODE --version" 
+echo $(node --version)
+echo "NPM --version" 
+echo $(npm --version)
+
 echo '>>>>>>>>>>> checkpoint 1'
 
 aws s3 cp --recursive  ./www s3://random1994/
