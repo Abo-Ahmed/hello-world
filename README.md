@@ -1,5 +1,16 @@
 # Hosting a Full-Stack Application
 
+### S3 bucket link
+http://random1994.s3-website.us-east-2.amazonaws.com
+
+### elastic beanstalk link
+http://udagram-api-dev.eba-7zkysc63.us-east-1.elasticbeanstalk.com/
+
+### database connectino string
+database-1.cfk009rrsstw.us-east-1.rds.amazonaws.com
+
+
+
 ### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
 
 ---
