@@ -9,6 +9,9 @@ http://udagram-api-dev.eba-7zkysc63.us-east-1.elasticbeanstalk.com/
 ### database connectino string
 database-1.cfk009rrsstw.us-east-1.rds.amazonaws.com
 
+### circle ci link
+https://app.circleci.com/pipelines/github/Abo-Ahmed/udagram
+
 
 
 ### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
