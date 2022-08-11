@@ -59,6 +59,7 @@ jobs:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
+            aws configure
             npm run deploy
             
 workflows:
