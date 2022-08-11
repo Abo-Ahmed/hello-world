@@ -69,6 +69,10 @@ jobs:
             npm run deploy
             
 workflows:
+  aws-cli:
+    jobs:
+      - aws-cli-cred-setup:
+          context: aws
   udagram:
     jobs:
       - build
@@ -80,8 +84,6 @@ workflows:
       #     type: approval
       #     requires:
       #       - build
-      - aws-cli-cred-setup:
-          context: aws
       - deploy:
           requires:
             - build
