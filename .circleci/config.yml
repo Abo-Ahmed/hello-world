@@ -43,8 +43,14 @@ jobs:
       - run:
           name: API Build
           command: |
-           npm run api:build
-  # deploy step will run only after manual approval
+           npm run api:build  
+  aws-cli-cred-setup:
+    executor: aws-cli/default
+    steps:
+      - aws-cli/setup:
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          aws-region: AWS_DEFAULT_REGION
   deploy:
     docker:
       - image: "cimg/base:stable"
@@ -74,6 +80,8 @@ workflows:
       #     type: approval
       #     requires:
       #       - build
+      - aws-cli-cred-setup:
+          context: aws
       - deploy:
           requires:
             - build
